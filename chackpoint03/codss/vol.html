@@ -1,0 +1,214 @@
+<html lang="en">
+  <head>
+    <link rel="icon" href="plane.png" type="image/x-icon"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>skywings</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="homepage.html" class="logo">Skywings</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+         <li><a href="homepage.html">homepage</a></li>
+        <li><a href="popular destination.html">popular destination</a></li>
+        <li><a href="vol.html">vol</a></li>
+        <li><a href="contact.html">contact</a></li>
+
+ 
+      </ul>
+      <div class="nav__btns">
+        
+      </div>
+    </nav>
+
+    
+
+    <section class="section__container destination__container" id="about">
+      <h2 class="section__header">ticketing section </h2>
+      <p class="section__description">
+         your comfortability is our priortiy
+      </p>
+      <title>flight Reservation </title>
+   <fieldset>
+        <legend>Personal Information</legend>
+
+        <label>Full Name *</label><br>
+        <input type="text" name="full_name" placeholder="Full Name" required><br><br>
+
+        <label>Phone *</label><br>
+        <input type="tel" name="phone" placeholder="Enter your phone number" required><br><br>
+
+        <label>Email *</label><br>
+        <input type="email" name="email" placeholder="Enter your email" required><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Flight & Destination</legend>
+
+        <label>Flight Type *</label><br>
+        <select name="flight_type" required>
+            <option value="round-trip">Round Trip</option>
+            <option value="one-way">One Way</option>
+        </select><br><br>
+
+        <label>Class *</label><br>
+        <select name="class" required>
+            <option value="economy">Economy</option>
+            <option value="business">Business</option>
+            <option value="first">First Class</option>
+        </select><br><br>
+
+        <label>Preferred Airline *</label><br>
+        <input type="text" name="airline" placeholder="Preferred Airline" required><br><br>
+
+        <label>Departure City *</label><br>
+        <input type="text" name="departure_city" placeholder="Departure City" required><br><br>
+
+        <label>Departure Date *</label><br>
+        <input type="date" name="departure_date" required><br><br>
+
+        <label>Arrival City *</label><br>
+        <input type="text" name="arrival_city" placeholder="Arrival City" required><br><br>
+
+        <label>Arrival Date *</label><br>
+        <input type="date" name="arrival_date" required><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Passengers</legend>
+
+        <div id="passengers">
+            <div>
+                <label>Passenger Name *</label><br>
+                <input type="text" name="passenger_name[]" placeholder="Passenger Name" required><br><br>
+
+                <label>Age *</label><br>
+                <input type="number" name="passenger_age[]" placeholder="Passenger Age" min="0" required><br><br>
+
+                <label>Comment *</label><br>
+                <textarea name="passenger_comment[]" placeholder="Comment"></textarea><br><br>
+            </div>
+        </div>
+
+        <button type="button" onclick="addPassenger()">Add Passenger</button>
+        <button type="button" onclick="removePassenger()">Remove Passenger</button>
+    </fieldset>
+
+    <br>
+    <button type="submit">Submit</button>
+
+</form>
+
+<script>
+function addPassenger() {
+    var container = document.getElementById("passengers");
+    var div = document.createElement("div");
+
+    div.innerHTML = `
+        <label>Passenger Name *</label><br>
+        <input type="text" name="passenger_name[]" placeholder="Passenger Name" required><br><br>
+
+        <label>Age *</label><br>
+        <input type="number" name="passenger_age[]" placeholder="Passenger Age" min="0" required><br><br>
+
+        <label>Comment *</label><br>
+        <textarea name="passenger_comment[]" placeholder="Comment"></textarea><br><br>
+    `;
+
+    container.appendChild(div);
+}
+
+function removePassenger() {
+    var container = document.getElementById("passengers");
+    if (container.children.length > 1) {
+        container.removeChild(container.lastElementChild);
+    }
+}
+</script>
+
+   
+    <footer id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">Skywings</a>
+          </div>
+          <p>
+            Explore the world with ease and excitement through our comprehensive
+            travel platform. Your journey begins here, where seamless planning
+            meets unforgettable experiences.
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-line"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Cruise</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="#">
+                <span><i class="ri-phone-fill"></i></span> +216 55 548 402
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-record-mail-line"></i></span> skywings@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-map-pin-2-fill"></i></span> tunisia tunis
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Subscribe</h4>
+          <form action="/">
+            <input type="text" placeholder="Enter your email" />
+            <button class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bar">
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

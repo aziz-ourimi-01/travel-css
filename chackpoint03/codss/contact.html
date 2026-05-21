@@ -1,0 +1,192 @@
+<html lang="en">
+  <head>
+    <link rel="icon" href="plane.png" type="image/x-icon"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>skywings</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="homepage.html" class="logo">Skywings</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+         <li><a href="homepage.html">homepage</a></li>
+        <li><a href="popular destination.html">popular destination</a></li>
+        <li><a href="vol.html">vol</a></li>
+        <li><a href="contact.html">contact</a></li>
+
+ 
+      </ul>
+      <div class="nav__btns">
+        
+      </div>
+    </nav>
+
+    
+
+    <section class="section__container destination__container" id="about">
+      <h2 class="section__header">contact</h2>
+      <p class="section__description">
+         skywings  is a travel agency specializing in hotel bookings, tours, Umrah trips, plane tickets, cruises, and creating organized trips, especially honeymoon trips.
+      </p>
+
+      <iframe   class="map-container"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.784766368902!2d10.20586129999999!3d36.72773009999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd376d6100499f%3A0xdfe647ea4b4d3709!2sGomycode%20El%20Mourouj!5e0!3m2!1sen!2stn!4v1771230919014!5m2!1sen!2stn" width="400" height="250"   style="border:2px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <title>flight Reservation </title>
+   <fieldset>
+        <legend>Personal Information</legend>
+
+        <label>Full Name *</label><br>
+        <input type="text" name="full_name" placeholder="Full Name" required><br><br>
+
+        <label>Phone *</label><br>
+        <input type="tel" name="phone" placeholder="Enter your phone number" required><br><br>
+
+        <label>Email *</label><br>
+        <input type="email" name="email" placeholder="Enter your email" required><br><br>
+   
+
+
+        <label>subject *</label><br>
+        <select name="flight_type" required>
+            <option value="round-trip">complaint</option>
+            <option value="one-way">Information or request</option>
+        </select><br><br>
+
+
+
+        <div id="passengers">
+            <div>
+  
+
+  
+                <label>Comment *</label><br>
+                <textarea name="passenger_comment[]" placeholder="Comment"></textarea><br><br>
+            </div>
+        </div>
+
+        
+    </fieldset>
+
+    <br>
+    <button type="submit">Submit</button>
+
+</form>
+
+
+
+
+<script>
+function addPassenger() {
+    var container = document.getElementById("passengers");
+    var div = document.createElement("div");
+
+    div.innerHTML = `
+        <label>Passenger Name *</label><br>
+        <input type="text" name="passenger_name[]" placeholder="Passenger Name" required><br><br>
+
+        <label>Age *</label><br>
+        <input type="number" name="passenger_age[]" placeholder="Passenger Age" min="0" required><br><br>
+
+        <label>Comment *</label><br>
+        <textarea name="passenger_comment[]" placeholder="Comment"></textarea><br><br>
+    `;
+
+    container.appendChild(div);
+}
+
+function removePassenger() {
+    var container = document.getElementById("passengers");
+    if (container.children.length > 1) {
+        container.removeChild(container.lastElementChild);
+    }
+}
+</script>
+
+
+
+
+   
+    <footer id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">Skywings</a>
+          </div>
+          <p>
+            Explore the world with ease and excitement through our comprehensive
+            travel platform. Your journey begins here, where seamless planning
+            meets unforgettable experiences.
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-line"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Cruise</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="#">
+                <span><i class="ri-phone-fill"></i></span> +216 55 548 402
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-record-mail-line"></i></span> skywings@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-map-pin-2-fill"></i></span> tunisia tunis
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Subscribe</h4>
+          <form action="/">
+            <input type="text" placeholder="Enter your email" />
+            <button class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bar">
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
